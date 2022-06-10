@@ -117,10 +117,9 @@ function verCarritoDeCompra(){
         else if (i==4 & cantidadLevitePera > 0){
             escribirProductoEnCarrito("Levité Pera Litro",cantidadLevitePera,total_levitePera)
         }    
-        else {document.querySelector(`#carrito_de_compra_${i}`).innerHTML =``};
+        else {mostrarSubTotal()}
         
-    }
-    mostrarSubTotal();
+    };
 }
 function mostrarSubTotal(){
     document.querySelector(`#sub_total`).innerHTML = `<h4> Sub total= $${subTotal}</h4><br>`; 
