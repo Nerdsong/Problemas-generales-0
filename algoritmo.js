@@ -111,7 +111,7 @@ function escribirProductoEnCarrito(nombreProducto,cantidadProducto,total_product
 function verCarritoDeCompra(){
     imprimirTablaCarrito()
     calcularTotales()
-    for (i=1 ; i < elementosInventario ; i ++){        
+    for (i=1 ; i <= elementosInventario ; i ++){        
         if (i==1 & cantidadCerveza > 0 ){
             escribirProductoEnCarrito("Cerveza Litro",cantidadCerveza,total_cerveza)
         }
@@ -266,7 +266,7 @@ function mostrarTotal(){
 function confirmaCompra(){
     
     imprimirTablaFactura()    
-    for (i=1 ; i < elementosInventario ; i ++){        
+    for (i=1 ; i <= elementosInventario ; i ++){        
         if (i==1 & cantidadCerveza > 0 ){
             escribirProductoEnFactura("Cerveza Litro",cantidadCerveza,PRECIO_CERVEZA,total_cerveza,tipoDePago,cantidadCuotas,recargoDescuento)
         }
