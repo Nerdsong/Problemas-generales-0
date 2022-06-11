@@ -72,14 +72,6 @@ function calcularTotales(){
     cantidadTotalProductos = (cantidadCerveza + cantidadCocacola + cantidadLevite + cantidadLevitePera) ;
     totalPago = subTotal;
 }
-function generarEspaciosCarrito(){
-    for (i=1 ; i < elementosInventario ; i ++){
-        document.querySelector(`#carrito_de_compra_total`).innerHTML +=`
-        <h6 id="carrito_de_compra_${i}"></h6>
-        
-        `;
-    }
-}
 function generarFilaEnTablaCarrito(){
     document.querySelector("#tabla_carrito").innerHTML+=`
         <tr>
