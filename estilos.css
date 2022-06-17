@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Barlow Condensed', sans-serif;;
+}
+
+
+.otrafuente{ font-family: 'Barlow Condensed', sans-serif ;} 
+        
+select{background-color: rgb(0, 0, 0); font-size: 13px; color: white;}
+
+tr{background-color: black; color:white;text-align: center;}
+
+button {
+    background-color: #e60404;
+    border-radius: 8px;
+    border-color: #e60404;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Barlow Condensed';
+    cursor: pointer;        
+}
+button:hover {background-color: #f03636}
+button:active {background-color: #fd2424;box-shadow: 0 2px #666;transform: translateY(2px);}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.header{
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: #e60404;
+    color: white;
+    padding: 10px;
+}
