@@ -226,7 +226,7 @@ function imprimirTablaCarrito(){
             <tr>
                 <td>Producto</td>
                 <td>Cantidad</td>
-                <td></td>
+                <td>Precio</td>
             </tr>            
         </table>
 

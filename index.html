@@ -6,50 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body >
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <style>
+        .otrafuente{ font-family: 'Barlow Condensed', sans-serif ;} 
+        
+        select{font-family: 'Barlow Condensed'; background-color: rgb(255, 247, 139); font-size: 13px}
+        tr{font-family: 'Barlow Condensed', sans-serif; background-color: black; color:white}
+        h4{font-family: 'Barlow Condensed'}
+        label{font-family: 'Barlow Condensed', sans-serif;}
+        button {
+            background-color: #e60404; /* Green */
+            border-radius: 8px;
+            border-color: #e60404;
+            color: white;
+            padding: 3px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-family: 'Barlow Condensed';
+            cursor: pointer;
+        }
+        button:hover {background-color: #f03636}
+        button:active {background-color: #fd2424;box-shadow: 0 2px #666;transform: translateY(2px);}
+
+    </style>
     <div>
-    <h2>Elige un producto</h2>
+    <div>
+    <h2 class="otrafuente">Elige un producto</h2>
     </div>
 
     <div>
-        <img src="imagenes/cervezaLitroImagen.png" alt="imagenCervezaLitro" style="width: 10%";>
-        <label>
-            Cerveza litro       $400  <select id="cantidades_1"> </select><button id="boton_cantidades_1" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        <img src="imagenes/cervezaLitroImagen.png" alt="imagenCervezaLitro" style="width: 10%";><br>
+        <label class="otrafuente">
+            Cerveza litro       $400 <br> <select id="cantidades_1"> </select><button id="boton_cantidades_1" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
         </label>
         <br>
     </div>
     
     <div>
-        <img src="imagenes/cocaCola2LT.jpg" alt="imagenCocacola2LT" style="width: 10%";>
-        <label>
-            Coca-cola 2 litros    $200 <select id="cantidades_2"> </select><button id="boton_cantidades_2" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        <img src="imagenes/cocaCola2LT.jpg" alt="imagenCocacola2LT" style="width: 10%";><br>
+        <label class="otrafuente">
+            Coca-cola 2 litros    $200 <br> <select id="cantidades_2"> </select><button id="boton_cantidades_2" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
         </label>
         <br>
     </div>
     
     <div>
-        <img src="imagenes/leviteManzana.png" alt="imagenLeviteManzana" style="width: 10%";>
-        <label>
-            Levité Manzana litro    $180<select id="cantidades_3"> </select><button id="boton_cantidades_3" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        <img src="imagenes/leviteManzana.png" alt="imagenLeviteManzana" style="width: 10%";><br>
+        <label class="otrafuente">
+            Levité Manzana litro    $180<br><select id="cantidades_3"> </select><button id="boton_cantidades_3" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
         </label>
         <br>
     </div>
     <div>
-        <img src="imagenes/levitePera.png" alt="imagenLevitePera" style="width: 10%";>
-        <label>
-            Levité Pera Litro       $180<select id="cantidades_4"> </select><button id="boton_cantidades_4" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        <img src="imagenes/levitePera.png" alt="imagenLevitePera" style="width: 10%";><br>
+        <label class="otrafuente">
+            Levité Pera Litro       $180<br> <select id="cantidades_4"> </select><button id="boton_cantidades_4" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
         </label>
         <br>
     </div>
 
-    <button onclick="verCarritoDeCompra ()">Ver carrito de compra</button>
+    
+    <button onclick="verCarritoDeCompra ()"><img src="imagenes/CarritoDeCompra.png" alt="imagendecarritocompra" style= "width: 30px ; height: 30px;">Ver carrito de compra</button>
     <div id="carrito_de_compra_total">        
     </div>
     <div id="sub_total">        
     </div>
     <button onclick="vaciarCarrito()">Vaciar carrito</button>
     <div>
-    <label><h3>Elige el método de pago</h3>    
+    <label><h3 class="otrafuente">Elige el método de pago</h3>    
         <button onclick="pagoTarjeta()">Tarjeta</button>
         <button onclick="pagoEfectivo()">Efectivo</button>    
     </label>
@@ -64,6 +94,7 @@
     <div id= "factura" >
     </div>
     <div id="totalTotal">    
+    </div>
     </div>
 <script src="algoritmo.js"></script>
 </body>
