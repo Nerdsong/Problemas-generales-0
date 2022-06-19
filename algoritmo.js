@@ -121,8 +121,12 @@ function verCarritoDeCompra(){
     };
 }
 function mostrarSubTotal(){
-    document.querySelector(`#sub_total`).innerHTML = `<h4> Sub total= $${subTotal}</h4><br>`; 
-
+    document.querySelector(`#sub_total`).innerHTML = `<h4> Sub total= $${subTotal}</h4><br>`;
+    generarBotonVaciarcarrito() 
+}
+function generarBotonVaciarcarrito(){
+    document.querySelector(`#sub_total`).innerHTML += `
+    <button class= "carritoDeCompraTotal" onclick="vaciarCarrito()">Vaciar carrito</button>`
 }
 function vaciarCarrito(){
     document.querySelector(`#carrito_de_compra_total`).innerHTML = ``;
@@ -210,10 +214,11 @@ function descuentoPagoefectivo(){
      recargoDescuento = `Dcto ${DESCUENTO_POR_PAGO_EFECTIVO * 100}%`;
 }
 function pagoEfectivo(){
+    document.querySelector("#pago_final").innerHTML=``
     tipoDePago = "Efectivo";
     cantidadCuotas = "No aplica";
     descuentoPagoefectivo()
-    document.querySelector("#pago_final").innerHTML=`
+    document.querySelector("#pago_final").innerHTML+=`
     <h4> Pagando con efectivo tenés un ${DESCUENTO_POR_PAGO_EFECTIVO * 100}% de descuento</h4>
     <h4> En total, pagarás $${totalPago}</h4>
     `;

@@ -10,52 +10,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body class="contenedor">
-    <div>
+<body>
     <div style="text-align: center">
-    <header class="header">Elige un producto</header>
+    <header class="header">Elige un producto 
+        <button style="float: right;" onclick="verCarritoDeCompra ()"><img src="imagenes/CarritoDeCompra.png" alt="imagendecarritocompra" style= "width: 30px ; height: 30px;">Ver carrito de compra</button></header>
+    </div>
+    <div class="contenedor">
+    <div class = "producto1">
+        <img src="imagenes/cervezaLitroImagen.png" alt="imagenCervezaLitro" style="width: 300px; height: 300px";><br>
+        <label class="otrafuente">
+            Cerveza litro       $400 <br> <select id="cantidades_1"> </select><button class="botonAgregarCarrito" id="boton_cantidades_1" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        </label>
+        <br>
+    </div>
+    
+    <div class = "producto2">
+        <img src="imagenes/cocaCola2LT.jpg" alt="imagenCocacola2LT" style="width: 300px; height: 300px;"><br>
+        <label class="otrafuente">
+            Coca-cola 2 litros    $200 <br> <select id="cantidades_2"> </select><button class="botonAgregarCarrito" id="boton_cantidades_2" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        </label>
+        <br>
+    </div>
+    
+    <div class = "producto3">
+        <img src="imagenes/leviteManzana.png" alt="imagenLeviteManzana" style="width: 300px; height: 300px";><br>
+        <label class="otrafuente">
+            Levité Manzana litro    $180<br><select id="cantidades_3"> </select><button class="botonAgregarCarrito" id="boton_cantidades_3" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        </label>
+        <br>
+    </div>
+    <div class = "producto4">
+        <img src="imagenes/levitePera.png" alt="imagenLevitePera" style="width: 300px; height: 300px";><br>
+        <label class="otrafuente">
+            Levité Pera Litro       $180<br> <select id="cantidades_4"> </select><button class="botonAgregarCarrito" id="boton_cantidades_4" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
+        </label>
+        <br>
     </div>
 
-    <div style="float: letf">
-        <img src="imagenes/cervezaLitroImagen.png" alt="imagenCervezaLitro" style="width: 10%";><br>
-        <label class="otrafuente">
-            Cerveza litro       $400 <br> <select id="cantidades_1"> </select><button id="boton_cantidades_1" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
-        </label>
-        <br>
-    </div>
-    
     <div>
-        <img src="imagenes/cocaCola2LT.jpg" alt="imagenCocacola2LT" style="width: 10%";><br>
-        <label class="otrafuente">
-            Coca-cola 2 litros    $200 <br> <select id="cantidades_2"> </select><button id="boton_cantidades_2" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
-        </label>
-        <br>
+    <header class="headerCarrito carritoDeCompraTotal">Carrito De Compra:</header>
+    <div class= "carritoDeCompraTotal" id="carrito_de_compra_total">        
     </div>
-    
-    <div>
-        <img src="imagenes/leviteManzana.png" alt="imagenLeviteManzana" style="width: 10%";><br>
-        <label class="otrafuente">
-            Levité Manzana litro    $180<br><select id="cantidades_3"> </select><button id="boton_cantidades_3" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
-        </label>
-        <br>
+    <div  class= "carritoDeCompraTotal" id="sub_total">        
+    </div>
+    <!--<button class= "carritoDeCompraTotal" onclick="vaciarCarrito()">Vaciar carrito</button>-->
     </div>
     <div>
-        <img src="imagenes/levitePera.png" alt="imagenLevitePera" style="width: 10%";><br>
-        <label class="otrafuente">
-            Levité Pera Litro       $180<br> <select id="cantidades_4"> </select><button id="boton_cantidades_4" onclick="asignarCantidades(this.id)">Agregar al carrito</button>
-        </label>
-        <br>
-    </div>
-
-    
-    <button onclick="verCarritoDeCompra ()"><img src="imagenes/CarritoDeCompra.png" alt="imagendecarritocompra" style= "width: 30px ; height: 30px;">Ver carrito de compra</button>
-    <div id="carrito_de_compra_total">        
-    </div>
-    <div id="sub_total">        
-    </div>
-    <button onclick="vaciarCarrito()">Vaciar carrito</button>
     <div>
-    <label><h3 class="otrafuente">Elige el método de pago</h3>    
+    <label><h3 class="metodoDePago">Elige el método de pago</h3>    
         <button onclick="pagoTarjeta()">Tarjeta</button>
         <button onclick="pagoEfectivo()">Efectivo</button>    
     </label>
@@ -70,6 +72,7 @@
     <div id= "factura" >
     </div>
     <div id="totalTotal">    
+    </div>
     </div>
     </div>
 <script src="algoritmo.js"></script>
